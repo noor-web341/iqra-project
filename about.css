@@ -1,0 +1,38 @@
+.about-hero {
+    background: linear-gradient(135deg,#22c55e,#6366f1);
+    color: white;
+    padding: 80px 6%;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.about-content {
+    padding: 60px 6%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.about-card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.about-card h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.about-card ul {
+    padding-left: 20px;
+}
+
+.about-card li {
+    margin-bottom: 8px;
+}

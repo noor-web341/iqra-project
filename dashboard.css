@@ -1,0 +1,266 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI;
+}
+
+body{
+    background:#f4f6f9;
+}
+
+/* ================= LAYOUT ================= */
+.container{
+    display:flex;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar{
+    width:220px;
+    height:100vh;
+    background:#111827;
+    color:#fff;
+    padding:20px;
+    position:fixed;
+    left:0;
+    top:0;
+}
+
+.sidebar h2{
+    margin-bottom:20px;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    margin:15px 0;
+}
+
+.sidebar ul li a{
+    color:#fff;
+    text-decoration:none;
+    padding:10px;
+    display:block;
+    border-radius:6px;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active{
+    background:#2563eb;
+}
+
+/* ================= MAIN ================= */
+.main{
+    margin-left:240px;
+    padding:20px;
+    width:100%;
+}
+
+/* ================= DASHBOARD CARDS ================= */
+.cards{
+    display:flex;
+    gap:20px;
+    margin-bottom:20px;
+}
+
+.card{
+    background:#fff;
+    padding:20px;
+    border-radius:10px;
+    flex:1;
+    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* ================= CHART ================= */
+.chart-box{
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+    width:500px;
+    height:450px;
+    margin:40px auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+}
+
+.chart-box canvas{
+    width:350px !important;
+    height:350px !important;
+}
+
+/* ================= FORMS (BOOKS + HADITH) ================= */
+form{
+    background:#fff;
+    padding:15px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    margin-bottom:20px;
+}
+
+textarea, input, select{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    border:1px solid #ddd;
+    border-radius:6px;
+}
+
+/* BUTTON */
+button{
+    padding:10px 15px;
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+/* ================= TABLES (BOOKS + HADITH + USERS) ================= */
+.table, table{
+    width:100%;
+    background:#fff;
+    border-collapse:collapse;
+    margin-top:10px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 5px 10px rgba(0,0,0,0.05);
+}
+
+.table th, table th{
+    background:#2563eb;
+    color:#fff;
+    padding:12px;
+    text-align:left;
+}
+
+.table td, table td{
+    padding:12px;
+    border-bottom:1px solid #eee;
+    vertical-align:top;
+}
+
+.table tr:hover, table tr:hover{
+    background:#f9fafb;
+}
+
+/* ================= MESSAGES ================= */
+.msg-container{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.msg-card{
+    background:white;
+    padding:15px;
+    border-radius:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+.msg-card h3{
+    margin:0;
+    color:#2c3e50;
+}
+
+.msg-card p{
+    color:#555;
+}
+
+.actions a{
+    margin-right:10px;
+    text-decoration:none;
+    color:#3498db;
+}
+.main h2{
+    margin-bottom:20px;
+    color:#2c3e50;
+}
+
+/* FORM WRAPPER */
+.form-box{
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    border: 1px solid #eee;
+}
+
+/* LABELS */
+.form-box label{
+    display:block;
+    margin-top:12px;
+    font-weight:600;
+    color:#34495e;
+    font-size:14px;
+}
+
+/* INPUTS */
+.form-box input,
+.form-box textarea{
+    width:100%;
+    padding:12px 14px;
+    margin-top:6px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:14px;
+    transition:0.3s;
+    background:#fafafa;
+}
+
+.form-box input:focus,
+.form-box textarea:focus{
+    border-color:#2c3e50;
+    outline:none;
+    background:white;
+    box-shadow:0 0 6px rgba(44,62,80,0.2);
+}
+
+/* TEXTAREA */
+.form-box textarea{
+    height:90px;
+    resize:none;
+}
+
+/* BUTTON */
+.form-box button{
+    margin-top:18px;
+    width:100%;
+    padding:12px;
+    background: linear-gradient(135deg,#2c3e50,#34495e);
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:15px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.form-box button:hover{
+    background: linear-gradient(135deg,#1a252f,#2c3e50);
+    transform: translateY(-2px);
+}
+
+/* SUCCESS MESSAGE */
+.success{
+    background:#eafaf1;
+    color:#27ae60;
+    padding:10px;
+    border-radius:6px;
+    margin-bottom:15px;
+    font-weight:600;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+    .form-box{
+        width:100%;
+        padding:18px;
+    }
+}

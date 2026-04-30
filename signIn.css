@@ -1,0 +1,196 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1585036156171-384164a8c675') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 40, 20, 0.75);
+}
+
+.card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    padding: 40px;
+    width: 330px;
+    border-radius: 15px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+h1 {
+    color: gold;
+    margin-bottom: 5px;
+}
+
+h4 {
+    font-weight: normal;
+    margin-bottom: 15px;
+    color: #d4af37;
+}
+
+.input-group {
+    position: relative;
+    margin: 15px 0;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.toggle {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    cursor: pointer;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background: gold;
+    color: #003300;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #d4af37;
+}
+
+a {
+    color: gold;
+    text-decoration: none;
+}
+
+#strength {
+    font-size: 14px;
+    margin-bottom: 10px;
+} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1585036156171-384164a8c675') no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* DARK OVERLAY */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 40, 20, 0.75);
+}
+
+/* CARD */
+.card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    width: 330px;
+    border-radius: 15px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.4);
+}
+
+/* HEADINGS */
+h1 {
+    color: gold;
+}
+
+h4 {
+    color: rgb(234, 203, 24);
+    margin-bottom: 15px;
+}
+
+/* INPUT GROUP */
+.input-group {
+    position: relative;
+    margin: 15px 0;
+}
+
+/* INPUT */
+input {
+    width: 100%;
+    padding: 12px 40px 12px 12px; /* space for icon */
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: gold;
+    color: #003300;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #d4af37;
+    transform: scale(1.03);
+}
+
+/* LINKS */
+a {
+    color: gold;
+    text-decoration: none;
+}
+
+/* TEXT */
+#strength {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+#message {
+    margin-top: 10px;
+    font-size: 14px;
+}

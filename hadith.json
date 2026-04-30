@@ -1,0 +1,430 @@
+[
+  {
+    "book": "Sahih Bukhari",
+    "arabic": "إِنَّمَا الأَعْمَالُ بِالنِّيَّاتِ",
+    "english": "Actions are judged by intentions",
+    "status": "Sahih",
+    "reference": "Bukhari 1"
+  },
+  {
+    "book": "Sahih Muslim",
+    "arabic": "الطهور شطر الإيمان",
+    "english": "Purity is half of faith",
+    "status": "Sahih",
+    "reference": "Muslim 1"
+  },
+  {
+    "book": "Sahih Bukhari",
+    "arabic": "الدين النصيحة",
+    "english": "Religion is sincerity",
+    "status": "Sahih",
+    "reference": "Bukhari 2"
+  },
+  {
+    "book": "Sahih Muslim",
+    "arabic": "من حسن إسلام المرء تركه ما لا يعنيه",
+    "english": "Part of good Islam is leaving what does not concern you",
+    "status": "Sahih",
+    "reference": "Muslim 2"
+  },
+  {
+    "book": "Sahih Bukhari",
+    "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
+    "english": "None of you truly believes until he loves for his brother what he loves for himself",
+    "status": "Sahih",
+    "reference": "Bukhari 3"
+  },
+  {
+    "book": "Sahih Muslim",
+    "arabic": "إن الله كتب الإحسان على كل شيء",
+    "english": "Allah has prescribed excellence in everything",
+    "status": "Sahih",
+    "reference": "Muslim 3"
+  },
+  {
+    "book": "Sunan Abu Dawood",
+    "arabic": "من غشنا فليس منا",
+    "english": "Whoever cheats is not one of us",
+    "status": "Sahih",
+    "reference": "Abu Dawood 1"
+  },
+  {
+    "book": "Sahih Bukhari",
+    "arabic": "تبسمك في وجه أخيك صدقة",
+    "english": "Smiling in your brother's face is charity",
+    "status": "Hasan",
+    "reference": "Bukhari 4"
+  },
+  {
+    "book": "Sahih Muslim",
+    "arabic": "الكلمة الطيبة صدقة",
+    "english": "A good word is charity",
+    "status": "Sahih",
+    "reference": "Muslim 4"
+  },
+  {
+    "book": "Sunan Tirmidhi",
+    "arabic": "إنما بعثت لأتمم مكارم الأخلاق",
+    "english": "I was sent to perfect good character",
+    "status": "Sahih",
+    "reference": "Tirmidhi 1"
+  },
+
+  {
+    "book": "Sahih Bukhari",
+    "arabic": "من كان يؤمن بالله واليوم الآخر فليقل خيرا أو ليصمت",
+    "english": "Whoever believes in Allah and the Last Day should speak good or remain silent",
+    "status": "Sahih",
+    "reference": "Bukhari 5"
+  },
+  {
+    "book": "Sahih Muslim",
+    "arabic": "المسلم من سلم المسلمون من لسانه ويده",
+    "english": "A Muslim is one from whose tongue and hand others are safe",
+    "status": "Sahih",
+    "reference": "Muslim 5"
+  },
+  {
+    "book": "Sahih Bukhari",
+    "arabic": "خير الناس أنفعهم للناس",
+    "english": "The best people are those who benefit others",
+    "status": "Hasan",
+    "reference": "Bukhari 6"
+  },
+  {
+    "book": "Sahih Muslim",
+    "arabic": "لا ضرر ولا ضرار",
+    "english": "There should be neither harming nor reciprocating harm",
+    "status": "Sahih",
+    "reference": "Muslim 6"
+  },
+  {
+    "book": "Sunan Abu Dawood",
+    "arabic": "الدين يسر",
+    "english": "Religion is easy",
+    "status": "Sahih",
+    "reference": "Abu Dawood 2"
+  },
+  {
+    "book": "Sahih Bukhari",
+    "arabic": "من لا يرحم لا يرحم",
+    "english": "He who does not show mercy will not be shown mercy",
+    "status": "Sahih",
+    "reference": "Bukhari 7"
+  },
+  {
+    "book": "Sahih Muslim",
+    "arabic": "إن الله جميل يحب الجمال",
+    "english": "Allah is beautiful and loves beauty",
+    "status": "Sahih",
+    "reference": "Muslim 7"
+  },
+  {
+    "book": "Sahih Bukhari",
+    "arabic": "أحب الأعمال إلى الله أدومها وإن قل",
+    "english": "The most beloved deeds to Allah are those that are consistent even if small",
+    "status": "Sahih",
+    "reference": "Bukhari 8"
+  },
+  {
+    "book": "Sahih Muslim",
+    "arabic": "اطلبوا العلم من المهد إلى اللحد",
+    "english": "Seek knowledge from cradle to grave",
+    "status": "Hasan",
+    "reference": "Muslim 8"
+  },
+  {
+    "book": "Sunan Tirmidhi",
+    "arabic": "الراحمون يرحمهم الرحمن",
+    "english": "The merciful are shown mercy by the Most Merciful",
+    "status": "Sahih",
+    "reference": "Tirmidhi 2"
+  },
+  {
+    "book": "Sahih Bukhari",
+    "arabic": "إن الله لا ينظر إلى صوركم ولكن ينظر إلى قلوبكم",
+    "english": "Allah does not look at your appearance but at your hearts",
+    "status": "Sahih",
+    "reference": "Bukhari 9"
+  },
+  {
+    "book": "Sahih Muslim",
+    "arabic": "من حسن إسلام المرء تركه ما لا يعنيه",
+    "english": "Part of good Islam is leaving what does not concern you",
+    "status": "Sahih",
+    "reference": "Muslim 9"
+  },
+  {
+    "book": "Sahih Bukhari",
+    "arabic": "إن الله يحب إذا عمل أحدكم عملاً أن يتقنه",
+    "english": "Allah loves that when one does a job, he does it perfectly",
+    "status": "Sahih",
+    "reference": "Bukhari 10"
+  },
+  {
+    "book": "Sahih Muslim",
+    "arabic": "المؤمن القوي خير وأحب إلى الله من المؤمن الضعيف",
+    "english": "A strong believer is better and more beloved to Allah than a weak one",
+    "status": "Sahih",
+    "reference": "Muslim 10"
+  },
+  {
+    "book": "Sunan Abu Dawood",
+    "arabic": "إنما الدنيا متاع",
+    "english": "Indeed this world is temporary enjoyment",
+    "status": "Hasan",
+    "reference": "Abu Dawood 3"
+  },
+  {
+    "book": "Sahih Bukhari",
+    "arabic": "أفضل الصدقة سقي الماء",
+    "english": "The best charity is giving water",
+    "status": "Hasan",
+    "reference": "Bukhari 11"
+  },
+  {
+    "book": "Sahih Muslim",
+    "arabic": "تبسمك في وجه أخيك صدقة",
+    "english": "Smiling at your brother is charity",
+    "status": "Sahih",
+    "reference": "Muslim 11"
+  },
+  {
+    "book": "Sunan Tirmidhi",
+    "arabic": "طلب العلم فريضة على كل مسلم",
+    "english": "Seeking knowledge is obligatory on every Muslim",
+    "status": "Sahih",
+    "reference": "Tirmidhi 3"
+  },
+  {
+    "book": "Sahih Bukhari",
+    "arabic": "خيركم من تعلم القرآن وعلمه",
+    "english": "The best among you are those who learn and teach the Quran",
+    "status": "Sahih",
+    "reference": "Bukhari 12"
+  },
+  {
+    "book": "Sahih Muslim",
+    "arabic": "من صمت نجا",
+    "english": "Whoever remains silent is saved",
+    "status": "Hasan",
+    "reference": "Muslim 12"
+  },
+  {
+    "book": "Sahih Bukhari",
+    "arabic": "الحياء من الإيمان",
+    "english": "Modesty is part of faith",
+    "status": "Sahih",
+    "reference": "Bukhari 13"
+  },
+  {
+    "book": "Sahih Muslim",
+    "arabic": "لا يدخل الجنة من كان في قلبه مثقال ذرة من كبر",
+    "english": "No one with arrogance in their heart will enter Paradise",
+    "status": "Sahih",
+    "reference": "Muslim 13"
+  },
+  {
+    "book": "Sunan Abu Dawood",
+    "arabic": "اتق الله حيثما كنت",
+    "english": "Fear Allah wherever you are",
+    "status": "Sahih",
+    "reference": "Abu Dawood 4"
+  },
+  {
+    "book": "Sahih Bukhari",
+    "arabic": "من لا يشكر الناس لا يشكر الله",
+    "english": "Whoever does not thank people does not thank Allah",
+    "status": "Sahih",
+    "reference": "Bukhari 14"
+  },
+  {
+    "book": "Sahih Muslim",
+    "arabic": "إن الله كتب الإحسان على كل شيء",
+    "english": "Allah has prescribed excellence in everything",
+    "status": "Sahih",
+    "reference": "Muslim 14"
+  },
+  {
+    "book": "Sahih Bukhari",
+    "arabic": "أحب الأعمال إلى الله الصلاة على وقتها",
+    "english": "The most beloved deed to Allah is prayer on time",
+    "status": "Sahih",
+    "reference": "Bukhari 15"
+  },
+  {
+    "book": "Sahih Muslim",
+    "arabic": "إن الله لا يضيع أجر المحسنين",
+    "english": "Allah does not waste the reward of those who do good",
+    "status": "Sahih",
+    "reference": "Muslim 15"
+  },
+  {
+    "book": "Sunan Tirmidhi",
+    "arabic": "من تواضع لله رفعه الله",
+    "english": "Whoever humbles himself for Allah, Allah will raise him",
+    "status": "Hasan",
+    "reference": "Tirmidhi 4"
+  },
+  {
+    "book": "Sahih Bukhari",
+    "arabic": "إن مع العسر يسرا",
+    "english": "Indeed with hardship comes ease",
+    "status": "Sahih",
+    "reference": "Bukhari 16"
+  },
+  {
+    "book": "Sahih Muslim",
+    "arabic": "الراحمون يرحمهم الرحمن",
+    "english": "The merciful are shown mercy by Allah",
+    "status": "Sahih",
+    "reference": "Muslim 16"
+  },
+  {
+    "book": "Sunan Abu Dawood",
+    "arabic": "الدال على الخير كفاعله",
+    "english": "One who guides to good is like the doer",
+    "status": "Hasan",
+    "reference": "Abu Dawood 5"
+  },
+  {
+    "book": "Sunan Abu Dawood",
+    "arabic": "إن الله طيب لا يقبل إلا طيبا",
+    "english": "Allah is pure and accepts only what is pure",
+    "status": "Sahih",
+    "reference": "Abu Dawood 6"
+  },
+  {
+    "book": "Sunan Abu Dawood",
+    "arabic": "المسلم أخو المسلم",
+    "english": "A Muslim is a brother of another Muslim",
+    "status": "Sahih",
+    "reference": "Abu Dawood 7"
+  },
+  {
+    "book": "Sunan Abu Dawood",
+    "arabic": "كلكم راع وكلكم مسؤول عن رعيته",
+    "english": "Each of you is a shepherd and responsible for his flock",
+    "status": "Sahih",
+    "reference": "Abu Dawood 8"
+  },
+  {
+    "book": "Sunan Abu Dawood",
+    "arabic": "من دل على خير فله مثل أجر فاعله",
+    "english": "Whoever guides to good gets reward like the doer",
+    "status": "Hasan",
+    "reference": "Abu Dawood 9"
+  },
+  {
+    "book": "Sunan Abu Dawood",
+    "arabic": "إنما الأعمال بالخواتيم",
+    "english": "Actions are judged by their endings",
+    "status": "Hasan",
+    "reference": "Abu Dawood 10"
+  },
+  {
+    "book": "Sunan Tirmidhi",
+    "arabic": "إن الله يحب التوابين",
+    "english": "Allah loves those who repent",
+    "status": "Sahih",
+    "reference": "Tirmidhi 5"
+  },
+  {
+    "book": "Sunan Tirmidhi",
+    "arabic": "من لا يرحم لا يُرحم",
+    "english": "He who does not show mercy will not be shown mercy",
+    "status": "Sahih",
+    "reference": "Tirmidhi 6"
+  },
+  {
+    "book": "Sunan Tirmidhi",
+    "arabic": "الدعاء مخ العبادة",
+    "english": "Supplication is the essence of worship",
+    "status": "Hasan",
+    "reference": "Tirmidhi 7"
+  },
+  {
+    "book": "Sunan Tirmidhi",
+    "arabic": "أفضل الذكر لا إله إلا الله",
+    "english": "The best remembrance is 'La ilaha illallah'",
+    "status": "Sahih",
+    "reference": "Tirmidhi 8"
+  },
+  {
+    "book": "Sunan Tirmidhi",
+    "arabic": "إن الله يحب الرفق في الأمر كله",
+    "english": "Allah loves gentleness in all matters",
+    "status": "Sahih",
+    "reference": "Tirmidhi 9"
+  },
+  {
+    "book": "Sunan Abu Dawood",
+    "arabic": "من سلك طريقا يلتمس فيه علما سهل الله له طريقا إلى الجنة",
+    "english": "Whoever seeks knowledge, Allah makes his path to Paradise easy",
+    "status": "Sahih",
+    "reference": "Abu Dawood 11"
+  },
+  {
+    "book": "Sunan Abu Dawood",
+    "arabic": "المؤمن للمؤمن كالبنيان يشد بعضه بعضا",
+    "english": "Believers are like a building supporting each other",
+    "status": "Sahih",
+    "reference": "Abu Dawood 12"
+  },
+  {
+    "book": "Sunan Abu Dawood",
+    "arabic": "حب لأخيك ما تحب لنفسك",
+    "english": "Love for your brother what you love for yourself",
+    "status": "Sahih",
+    "reference": "Abu Dawood 13"
+  },
+  {
+    "book": "Sunan Abu Dawood",
+    "arabic": "إن الله لا يغير ما بقوم حتى يغيروا ما بأنفسهم",
+    "english": "Allah does not change a people until they change themselves",
+    "status": "Sahih",
+    "reference": "Abu Dawood 14"
+  },
+  {
+    "book": "Sunan Abu Dawood",
+    "arabic": "خيركم خيركم لأهله",
+    "english": "The best of you are those who are best to their families",
+    "status": "Hasan",
+    "reference": "Abu Dawood 15"
+  },
+  {
+    "book": "Sunan Tirmidhi",
+    "arabic": "الصدق يهدي إلى البر",
+    "english": "Truthfulness leads to righteousness",
+    "status": "Sahih",
+    "reference": "Tirmidhi 10"
+  },
+  {
+    "book": "Sunan Tirmidhi",
+    "arabic": "لا يؤمن أحدكم حتى يحب لأخيه ما يحب لنفسه",
+    "english": "None of you truly believes until he loves for his brother what he loves for himself",
+    "status": "Sahih",
+    "reference": "Tirmidhi 11"
+  },
+  {
+    "book": "Sunan Tirmidhi",
+    "arabic": "إن الله كتب الإحسان في كل شيء",
+    "english": "Allah has prescribed excellence in everything",
+    "status": "Sahih",
+    "reference": "Tirmidhi 12"
+  },
+  {
+    "book": "Sunan Tirmidhi",
+    "arabic": "الدنيا سجن المؤمن",
+    "english": "The world is a prison for the believer",
+    "status": "Hasan",
+    "reference": "Tirmidhi 13"
+  },
+  {
+    "book": "Sunan Tirmidhi",
+    "arabic": "من صبر ظفر",
+    "english": "Whoever is patient will succeed",
+    "status": "Hasan",
+    "reference": "Tirmidhi 14"
+  }
+]
