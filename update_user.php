@@ -1,11 +1,32 @@
 <?php
-$conn = mysqli_connect(
-    "sql308.infinityfree.com",
-    "if0_41802860",
-    "GWHDgLz3W2GQ",
-    "if0_41802860_iqra"
-);
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db   = "iqra_db";
 
+/*
+✔ LIVE HOSTING (InfinityFree)
+*/
+$live_host = "sql308.infinityfree.com";
+$live_user = "if0_41802860";
+$live_pass = "GWHDgLz3W2GQ";
+$live_db   = "if0_41802860_iqra";
+
+/*
+✔ AUTO DETECT ENVIRONMENT
+*/
+if($_SERVER['HTTP_HOST'] == "localhost") {
+    $conn = mysqli_connect($host, $user, $pass, $db);
+} else {
+    $conn = mysqli_connect($live_host, $live_user, $live_pass, $live_db);
+}
+
+/*
+✔ ERROR CHECK
+*/
+if(!$conn){
+    die("Database connection failed: " . mysqli_connect_error());
+}
 if(isset($_POST['update'])){
     $id = $_POST['id'];
     $name = $_POST['name'];
