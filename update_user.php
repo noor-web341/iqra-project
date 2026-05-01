@@ -1,5 +1,10 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "iqra_db");
+$conn = mysqli_connect(
+    "sql308.infinityfree.com",
+    "if0_41802860",
+    "GWHDgLz3W2GQ",
+    "if0_41802860_iqra"
+);
 
 if(isset($_POST['update'])){
     $id = $_POST['id'];

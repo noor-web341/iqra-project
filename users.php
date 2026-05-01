@@ -6,7 +6,12 @@ if(!isset($_SESSION['user']) || $_SESSION['role'] !== 'admin'){
     exit();
 }
 
-$conn = mysqli_connect("localhost","root","","iqra_db");
+$conn = mysqli_connect(
+    "sql308.infinityfree.com",
+    "if0_41802860",
+    "GWHDgLz3W2GQ",
+    "if0_41802860_iqra"
+);
 
 // search
 $search = "";
