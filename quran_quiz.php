@@ -217,7 +217,7 @@ foreach($surahs as $id=>$name){
 <script>
     function goBack(){
      {
-        window.location.href = "index.html"; // fallback
+        window.location.href = "index.php"; // fallback
     }
 }
 </script>

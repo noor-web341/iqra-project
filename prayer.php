@@ -334,7 +334,7 @@ function goBack(){
     if(document.referrer){
         window.history.back();
     } else {
-        window.location.href = "index.html";
+        window.location.href = "index.php";
     }
 }
 </script>
