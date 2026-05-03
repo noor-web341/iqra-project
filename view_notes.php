@@ -37,35 +37,27 @@ body{
     box-shadow:0 4px 15px rgba(0,0,0,0.1);
 }
 
-/* BACK BUTTON */
 .back-arrow{
     position:fixed;
     top:15px;
     left:15px;
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    background:white;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow:0 3px 10px rgba(0,0,0,0.1);
     cursor:pointer;
+    font-size:18px;
+    font-weight:bold;
+    color:#333;
+    background:none;
+    width:auto;
+    height:auto;
+    border-radius:0;
+    box-shadow:none;
+    display:inline-block;
     transition:0.2s;
 }
 
 .back-arrow:hover{
-    transform:scale(1.05);
+    opacity:0.7;
+    transform:none;
 }
-
-.back-arrow svg{
-    width:20px;
-    height:20px;
-    stroke:#333;
-    stroke-width:2.5;
-    fill:none;
-}
-
 /* NOTES WRAPPER */
 .container{
     padding:15px;
@@ -164,10 +156,8 @@ body{
 
 <body>
 
-<div class="back-arrow" onclick="goBack()">
-    <svg viewBox="0 0 24 24">
-        <path d="M15 6l-6 6 6 6"></path>
-    </svg>
+  <div class="back-arrow" onclick="goBack()">
+    IQRA
 </div>
 
 <div class="header">📒 My Personal Notes</div>

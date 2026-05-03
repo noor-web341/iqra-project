@@ -72,7 +72,9 @@ if(isset($_POST['login'])){
 <div class="overlay"></div>
 
 <div class="card">
+   <a href="index.php" class="borl">
     <h1>IQRA</h1>
+</a>
     <h4>بِسْمِ ٱللَّٰهِ</h4>
     <h3>Login to Continue</h3>
 
@@ -91,7 +93,7 @@ if(isset($_POST['login'])){
 
     </form>
 
-    <p>Don't have an account? <a href="signin.php">Sign Up</a></p>
+    <p>Don't have an account? <a href="signup.php">Sign Up</a></p>
 </div>
 
 </body>

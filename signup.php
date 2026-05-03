@@ -1,4 +1,3 @@
-
 <?php
 header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Pragma: no-cache");
@@ -38,14 +37,18 @@ if(isset($_POST['signup'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
 
+    // 🔥 NEW FIELDS
+    $country = $_POST['country'];
+    $city = $_POST['city'];
+
     // check existing email
     $check = mysqli_query($conn, "SELECT * FROM user WHERE email='$email'");
 
     if(mysqli_num_rows($check) > 0){
         echo "<script>alert('Email already exists');</script>";
     } else {
-        $query = "INSERT INTO user (name, email, password, role) 
-                  VALUES ('$name','$email','$password','user')";
+        $query = "INSERT INTO user (name, email, password, role, country, city) 
+                  VALUES ('$name','$email','$password','user','$country','$city')";
 
       if(mysqli_query($conn, $query)){
 
@@ -59,7 +62,6 @@ if(isset($_POST['signup'])){
     $_SESSION['user_id'] = $user['id'];
 
     echo "<script>
-            alert('Signup Successful 🎉');
             window.location='index.php';
           </script>";
         } else {
@@ -88,7 +90,9 @@ if(isset($_POST['signup'])){
 <div class="overlay"></div>
 
 <div class="card">
+   <a href="index.php" class="borl">
     <h1>IQRA</h1>
+</a>
     <h4>Welcome</h4>
     <h3>Create Account</h3>
 
@@ -102,7 +106,19 @@ if(isset($_POST['signup'])){
         <div class="input-group">
             <input type="email" name="email" placeholder="Email" required>
         </div>
+<div class="input-group">
+    <select name="country" id="country" onchange="updateCities()" required>
+        <option value="">Select Country</option>
+        <option value="Pakistan">Pakistan</option>
+        <option value="India">India</option>
+    </select>
+</div>
 
+<div class="input-group">
+    <select name="city" id="city" required>
+        <option value="">Select City</option>
+    </select>
+</div>
         <!-- PASSWORD FIELD -->
         <div class="input-group password-field">
             <input type="password" name="password" id="password" placeholder="Password" onkeyup="checkStrength()" required>

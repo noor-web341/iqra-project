@@ -31,24 +31,26 @@ body{
     color:#111827;
 }
 
-/* BACK BUTTON */
 .back-arrow{
-    position:absolute;
+    position:fixed;
+    top:15px;
     left:15px;
-    width:40px;
-    height:40px;
-    border-radius:50%;
-    background:#f3f4f6;
-    display:flex;
-    align-items:center;
-    justify-content:center;
     cursor:pointer;
+    font-size:18px;
+    font-weight:bold;
+    color:#333;
+    background:none;
+    width:auto;
+    height:auto;
+    border-radius:0;
+    box-shadow:none;
+    display:inline-block;
     transition:0.2s;
 }
 
 .back-arrow:hover{
-    background:#e5e7eb;
-    transform:scale(1.05);
+    opacity:0.7;
+    transform:none;
 }
 
 /* BUTTON */
@@ -154,11 +156,8 @@ body{
 <header class="view">
 
     <div class="back-arrow" onclick="goBack()">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-            <path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-    </div>
+    IQRA
+</div>
 
       <h2>🕌 Prayer Times</h2>
     <button class="btn" onclick="getLocation()">📍 Use Current Location</button>

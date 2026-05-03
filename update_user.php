@@ -1,39 +1,30 @@
 <?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db   = "iqra_db";
+$conn = mysqli_connect("localhost","root","","iqra_db");
 
-/*
-✔ LIVE HOSTING (InfinityFree)
-*/
-$live_host = "sql308.infinityfree.com";
-$live_user = "if0_41802860";
-$live_pass = "GWHDgLz3W2GQ";
-$live_db   = "if0_41802860_iqra";
-
-/*
-✔ AUTO DETECT ENVIRONMENT
-*/
-if($_SERVER['HTTP_HOST'] == "localhost") {
-    $conn = mysqli_connect($host, $user, $pass, $db);
-} else {
-    $conn = mysqli_connect($live_host, $live_user, $live_pass, $live_db);
-}
-
-/*
-✔ ERROR CHECK
-*/
 if(!$conn){
-    die("Database connection failed: " . mysqli_connect_error());
+    die("Database connection failed");
 }
+
 if(isset($_POST['update'])){
+
     $id = $_POST['id'];
     $name = $_POST['name'];
-    $email = $_POST['email'];
+    $country = $_POST['country'];
+    $city = $_POST['city'];
 
-    mysqli_query($conn, "UPDATE user SET name='$name', email='$email' WHERE id=$id");
+    $query = mysqli_query($conn,
+        "UPDATE user 
+         SET name='$name',
+             country='$country',
+             city='$city'
+         WHERE id=$id"
+    );
 
-    header("Location: dashboard.php");
+    if($query){
+        header("Location: users.php?msg=updated");
+        exit();
+    } else {
+        echo "Update failed!";
+    }
 }
 ?>

@@ -48,8 +48,8 @@ $result = mysqli_query($conn, "SELECT * FROM contact_messages ORDER BY id DESC")
             </a>
         </li>
  <li>
-    <a href="add_question.php" class="<?= ($page == 'add_question') ? 'active' : '' ?>">
-        Add Quiz Question
+    <a href="all_questions.php" class="<?= ($page == 'add_question') ? 'active' : '' ?>">
+        Quiz Questions
     </a>
 </li>
     </ul>
@@ -72,7 +72,7 @@ $result = mysqli_query($conn, "SELECT * FROM contact_messages ORDER BY id DESC")
 
     <div class="actions">
         <a href="delete_msg.php?id=<?php echo $row['id']; ?>">Delete</a>
-        <a href="mailto:<?php echo $row['email']; ?>">Reply</a>
+        
     </div>
 </div>
 

@@ -183,12 +183,9 @@ body{
 <!-- 🎯 QUIZ PAGE -->
 
 <div class="header" style="position:relative;">
-     <div class="back-arrow" onclick="goBack()">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-            <path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-    </div>
+      <div class="back-arrow" onclick="goBack()">
+    IQRA
+</div>
 
     <h1>📖 Quran Quiz</h1>
     <p>Select a Surah and test your knowledge</p>

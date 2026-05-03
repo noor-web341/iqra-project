@@ -1,33 +1,69 @@
+/* ================= RESET ================= */
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Segoe UI;
+    font-family:"Segoe UI", sans-serif;
 }
 
 body{
-    background:#f4f6f9;
+    background:#f1f5f9;
+    color:#111827;
+}
+
+/* ================= NAVBAR ================= */
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:60px;
+    background:#111827;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 20px;
+    z-index:1000;
+}
+
+.nav-left{
+    font-weight:bold;
+    font-size:18px;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logout-btn{
+    background:#ef4444;
+    padding:6px 12px;
+    color:white;
+    border-radius:6px;
+    text-decoration:none;
+    font-size:14px;
 }
 
 /* ================= LAYOUT ================= */
 .container{
     display:flex;
+    margin-top:60px;
 }
 
 /* ================= SIDEBAR ================= */
 .sidebar{
-    width:220px;
+    width:240px;
     height:100vh;
-    background:#111827;
-    color:#fff;
+    background:linear-gradient(180deg,#0f172a,#1e293b);
+    color:white;
     padding:20px;
     position:fixed;
     left:0;
-    top:0;
-}
-
-.sidebar h2{
-    margin-bottom:20px;
+    top:60px;
+    box-shadow:2px 0 10px rgba(0,0,0,0.1);
 }
 
 .sidebar ul{
@@ -35,232 +71,202 @@ body{
 }
 
 .sidebar ul li{
-    margin:15px 0;
+    margin:8px 0;
 }
 
 .sidebar ul li a{
-    color:#fff;
-    text-decoration:none;
-    padding:10px;
     display:block;
-    border-radius:6px;
+    padding:12px;
+    color:#cbd5e1;
+    text-decoration:none;
+    border-radius:8px;
+    transition:0.3s;
 }
 
 .sidebar ul li a:hover,
 .sidebar ul li a.active{
     background:#2563eb;
+    color:white;
 }
 
 /* ================= MAIN ================= */
 .main{
     margin-left:240px;
-    padding:20px;
+    padding:25px;
     width:100%;
 }
 
-/* ================= DASHBOARD CARDS ================= */
-.cards{
-    display:flex;
-    gap:20px;
+.main h2{
+    font-size:24px;
     margin-bottom:20px;
+    color:#111827;
+}
+
+/* ================= TOPBAR (optional support) ================= */
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:#fff;
+    padding:14px 20px;
+    border-radius:12px;
+    margin-bottom:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.05);
+}
+
+/* ================= CARDS ================= */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;
+    margin-bottom:25px;
 }
 
 .card{
     background:#fff;
-    padding:20px;
-    border-radius:10px;
-    flex:1;
-    box-shadow:0 5px 10px rgba(0,0,0,0.1);
+    padding:22px;
+    border-radius:14px;
+    text-align:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+    transition:0.3s;
 }
+
+.card:hover{
+    transform:translateY(-6px);
+}
+
+.card h3{
+    font-size:15px;
+    color:#6b7280;
+}
+
+.card p{
+    font-size:28px;
+    font-weight:700;
+    margin-top:8px;
+}
+
+/* CARD COLORS */
+.card:nth-child(1){ border-left:5px solid #22c55e; }
+.card:nth-child(2){ border-left:5px solid #3b82f6; }
+.card:nth-child(3){ border-left:5px solid #a855f7; }
+.card:nth-child(4){ border-left:5px solid #f59e0b; }
 
 /* ================= CHART ================= */
 .chart-box{
     background:#fff;
     padding:20px;
-    border-radius:12px;
-    width:500px;
-    height:450px;
-    margin:40px auto;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
+    border-radius:14px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.05);
+    margin-top:20px;
+    height:360px;
 }
 
-.chart-box canvas{
-    width:350px !important;
-    height:350px !important;
-}
-
-/* ================= FORMS (BOOKS + HADITH) ================= */
-form{
-    background:#fff;
-    padding:15px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.08);
-    margin-bottom:20px;
-}
-
-textarea, input, select{
+/* ================= TABLE ================= */
+table{
     width:100%;
-    padding:10px;
-    margin:8px 0;
-    border:1px solid #ddd;
-    border-radius:6px;
-}
-
-/* BUTTON */
-button{
-    padding:10px 15px;
-    background:#2563eb;
-    color:#fff;
-    border:none;
-    border-radius:6px;
-    cursor:pointer;
-}
-
-/* ================= TABLES (BOOKS + HADITH + USERS) ================= */
-.table, table{
-    width:100%;
-    background:#fff;
     border-collapse:collapse;
-    margin-top:10px;
-    border-radius:10px;
+    background:#fff;
+    border-radius:12px;
     overflow:hidden;
-    box-shadow:0 5px 10px rgba(0,0,0,0.05);
+    box-shadow:0 6px 18px rgba(0,0,0,0.05);
 }
 
-.table th, table th{
+th{
     background:#2563eb;
     color:#fff;
-    padding:12px;
+    padding:14px;
     text-align:left;
 }
 
-.table td, table td{
+td{
     padding:12px;
     border-bottom:1px solid #eee;
-    vertical-align:top;
 }
 
-.table tr:hover, table tr:hover{
+tr:hover{
     background:#f9fafb;
 }
 
-/* ================= MESSAGES ================= */
-.msg-container{
-    display:flex;
-    flex-direction:column;
-    gap:15px;
-}
-
-.msg-card{
-    background:white;
-    padding:15px;
-    border-radius:12px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-}
-
-.msg-card h3{
-    margin:0;
-    color:#2c3e50;
-}
-
-.msg-card p{
-    color:#555;
-}
-
-.actions a{
-    margin-right:10px;
-    text-decoration:none;
-    color:#3498db;
-}
-.main h2{
-    margin-bottom:20px;
-    color:#2c3e50;
-}
-
-/* FORM WRAPPER */
-.form-box{
-    background: #ffffff;
-    padding: 25px;
-    border-radius: 12px;
-    width: 100%;
-    max-width: 700px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    border: 1px solid #eee;
-}
-
-/* LABELS */
-.form-box label{
-    display:block;
-    margin-top:12px;
-    font-weight:600;
-    color:#34495e;
-    font-size:14px;
-}
-
-/* INPUTS */
-.form-box input,
-.form-box textarea{
-    width:100%;
-    padding:12px 14px;
-    margin-top:6px;
-    border:1px solid #ddd;
-    border-radius:8px;
-    font-size:14px;
-    transition:0.3s;
-    background:#fafafa;
-}
-
-.form-box input:focus,
-.form-box textarea:focus{
-    border-color:#2c3e50;
-    outline:none;
-    background:white;
-    box-shadow:0 0 6px rgba(44,62,80,0.2);
-}
-
-/* TEXTAREA */
-.form-box textarea{
-    height:90px;
-    resize:none;
-}
-
-/* BUTTON */
-.form-box button{
-    margin-top:18px;
+/* ================= FORMS ================= */
+input, textarea, select{
     width:100%;
     padding:12px;
-    background: linear-gradient(135deg,#2c3e50,#34495e);
-    color:white;
-    border:none;
-    border-radius:8px;
-    font-size:15px;
-    font-weight:bold;
-    cursor:pointer;
+    margin-top:10px;
+    border:1px solid #e5e7eb;
+    border-radius:10px;
+    background:#f9fafb;
+    font-size:14px;
     transition:0.3s;
 }
 
-.form-box button:hover{
-    background: linear-gradient(135deg,#1a252f,#2c3e50);
-    transform: translateY(-2px);
+input:focus, textarea:focus, select:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 3px rgba(37,99,235,0.15);
+    outline:none;
+    background:#fff;
 }
 
-/* SUCCESS MESSAGE */
-.success{
-    background:#eafaf1;
-    color:#27ae60;
-    padding:10px;
-    border-radius:6px;
-    margin-bottom:15px;
+textarea{
+    resize:none;
+    min-height:90px;
+}
+
+/* ================= LINKS ================= */
+.edit{
+    color:#2563eb;
     font-weight:600;
 }
 
-/* RESPONSIVE */
+.delete{
+    color:#ef4444;
+    font-weight:600;
+}
+
+/* ================= BUTTONS ================= */
+.add-btn{
+    background:#22c55e;
+    color:white;
+    padding:10px 16px;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.add-btn:hover{
+    background:#16a34a;
+}
+
+.success{
+    background:#d1fae5;
+    color:#065f46;
+    padding:10px;
+    border-radius:8px;
+    margin-bottom:10px;
+}
+
+.error{
+    background:#fee2e2;
+    color:#991b1b;
+    padding:10px;
+    border-radius:8px;
+    margin-bottom:10px;
+}
+
+/* ================= RESPONSIVE ================= */
 @media(max-width:768px){
-    .form-box{
-        width:100%;
-        padding:18px;
+
+    .sidebar{
+        width:200px;
+    }
+
+    .main{
+        margin-left:200px;
+        padding:15px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
     }
 }

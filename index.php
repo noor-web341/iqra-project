@@ -20,13 +20,15 @@ session_start();
 <header class="qc-navbar">
 
     <div class="qc-left">
-        <h2 class="qc-logo">IQRA</h2>
+       <a href="index.php" class="borl">
+  <h2 class="qc-logo">IQRA | Islamic Learning Platform</h2>
+</a>
     </div>
 
-    <div class="qc-center">
+    <!-- <div class="qc-center">
         <span class="track">🎯 Stay on track!</span>
         <button class="goal-btn">✨ Create My Goal</button>
-    </div>
+    </div> -->
 
     <!-- 🔥 LOGIN SYSTEM (FULL FIX) -->
     <div class="qc-right">
@@ -41,7 +43,7 @@ session_start();
 
         <?php } else { ?>
 
-            <a href="signin.php" class="signin-btn">Sign In</a>
+            <a href="login.php" class="signin-btn">Sign In</a>
 
         <?php } ?>
 
@@ -49,7 +51,9 @@ session_start();
         <span class="nav-icon">☰</span>
 
     </div>
-    <!-- HAMBURGER MENU PANEL --> <div class="menu-overlay" id="menuOverlay"></div> <aside class="side-menu" id="sideMenu"> <div class="menu-header"> <h3>IQRA</h3> <span class="close-btn" id="closeMenu">✕</span> </div> <nav class="menu-links"> <a href="index.php">🏠 Home</a> <a href="quran.php">📖 Quran</a> <a href="books.php">📚 Hadith</a> <a href="Goals.php">🎯 Goals</a> <a href="view_notes.php">📝 Notes</a> <a href="quran_quiz.php">🧠 Quiz</a> <a href="prayer.php">🕌 Prayer Times</a> <a href="about.php">ℹ️ About IQRA</a> <a href="contact.php">📞 Contact</a> </nav> </aside>
+    <!-- HAMBURGER MENU PANEL --> <div class="menu-overlay" id="menuOverlay"></div> <aside class="side-menu" id="sideMenu"> <div class="menu-header"> <h3>IQRA</h3> <span class="close-btn" id="closeMenu">✕</span> </div> <nav class="menu-links"> <a href="index.php">🏠 Home</a> <a href="quran.php">📖 Quran</a> <a href="books.php">📚 Hadith</a> 
+     <!-- <a href="Goals.php">🎯 Goals</a> -->
+      <a href="view_notes.php">📝 Notes</a> <a href="quran_quiz.php">🧠 Quiz</a> <a href="prayer.php">🕌 Prayer Times</a> <a href="about.php">ℹ️ About IQRA</a> <a href="contact.php">📞 Contact</a> </nav> </aside>
 
 </header>
 
@@ -65,11 +69,11 @@ session_start();
     </div>
 </section>
 
-<!-- SEARCH SCRIPT -->
 <script>
 document.getElementById("searchInput").addEventListener("keypress", function(e){
     if(e.key === "Enter"){
         let value = this.value.trim();
+
         if(value !== ""){
             window.location.href = "quran.php?search=" + encodeURIComponent(value);
         }
@@ -99,13 +103,13 @@ document.getElementById("searchInput").addEventListener("keypress", function(e){
 
         <div class="cr-side">
 
-            <a href="Goals.php" class="borl">
+            <!-- <a href="Goals.php" class="borl">
                 <div class="cr-card side-card">
                     <h3>🎯 Achieve Your Quran Goals</h3>
                     <p>Track Streaks, Create Custom Goals</p>
                     <span class="arrow">›</span>
                 </div>
-            </a>
+            </a> -->
 
            <!-- NOTES --> <a href="view_notes.php" class="borl"> <div class="cr-card side-card"> <h3>✏️ Have you been missing out on Notes?</h3> <span class="arrow">›</span> </div> </a>
 

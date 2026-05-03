@@ -1,78 +1,4 @@
-// function encode(password) {
-//     return btoa(password);
-// }
 
-// function togglePassword(id) {
-//     let field = document.getElementById(id);
-//     field.type = field.type === "password" ? "text" : "password";
-// }
-
-// function checkStrength() {
-//     let password = document.getElementById("password").value;
-//     let strength = document.getElementById("strength");
-
-//     if (password.length < 6) {
-//         strength.innerHTML = "Weak Password";
-//         strength.style.color = "red";
-//     } 
-//     else if (password.match(/[A-Z]/) && password.match(/[0-9]/)) {
-//         strength.innerHTML = "Strong Password";
-//         strength.style.color = "green";
-//     } 
-//     else {
-//         strength.innerHTML = "Medium Password";
-//         strength.style.color = "orange";
-//     }
-// }
-
-// function signup(event) {
-//     event.preventDefault();
-
-//     let name = document.getElementById("name").value.trim();
-//     let email = document.getElementById("email").value.trim();
-//     let password = document.getElementById("password").value.trim();
-
-//     if (!name || !email || !password) {
-//         document.getElementById("message").innerText = "All fields required!";
-//         return false;
-//     }
-
-//     let user = {
-//         name: name,
-//         email: email,
-//         password: encode(password)
-//     };
-
-//     localStorage.setItem("iqraUser", JSON.stringify(user));
-
-//     alert("Account Created Successfully!");
-//     window.location.href = "login.html";
-// }
-
-// function login(event) {
-//     event.preventDefault();
-
-//     let email = document.getElementById("loginEmail").value.trim();
-//     let password = encode(document.getElementById("loginPassword").value.trim());
-
-//     let storedUser = JSON.parse(localStorage.getItem("iqraUser"));
-
-//     if (!storedUser) {
-//         document.getElementById("message").innerText = "No account found!";
-//         return false;
-//     }
-
-//     if (email === storedUser.email && password === storedUser.password) {
-
-//         sessionStorage.setItem("iqraLoggedIn", "true");
-//         window.location.href = "home.html";
-//         return true;
-
-//     } else {
-//         document.getElementById("message").innerText = "Invalid Email or Password!";
-//         return false;
-//     }
-// }
 
 function encode(password) {
     return btoa(password);
@@ -175,3 +101,20 @@ function logout() {
     window.location.href = "login.html";
 }
 
+function updateCities() {
+    let country = document.getElementById("country").value;
+    let city = document.getElementById("city");
+
+    city.innerHTML = "<option value=''>Select City</option>";
+
+    if(country === "Pakistan"){
+        city.innerHTML += "<option>Lahore</option>";
+        city.innerHTML += "<option>Karachi</option>";
+        city.innerHTML += "<option>Islamabad</option>";
+    }
+    else if(country === "India"){
+        city.innerHTML += "<option>Delhi</option>";
+        city.innerHTML += "<option>Mumbai</option>";
+        city.innerHTML += "<option>Bangalore</option>";
+    }
+}

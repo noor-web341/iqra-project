@@ -64,8 +64,8 @@ $books = mysqli_query($conn,"SELECT * FROM books");
             </a>
         </li>
  <li>
-    <a href="add_question.php" class="<?= ($page == 'add_question') ? 'active' : '' ?>">
-        Add Quiz Question
+    <a href="all_questions.php" class="<?= ($page == 'add_question') ? 'active' : '' ?>">
+         Quiz Questions
     </a>
 </li>
         </ul>
