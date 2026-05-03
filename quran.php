@@ -17,13 +17,12 @@ $found = false;
     background:#000;
     color:#fff;
     padding:15px;
-
     display:flex;
     align-items:center;
-    gap:12px;
+    position:relative;
 }
 
-/* back button */
+/* back button left side */
 .back-arrow{
     width:38px;
     height:38px;
@@ -34,8 +33,11 @@ $found = false;
     cursor:pointer;
 }
 
-/* text */
+/* center heading */
 .view h2{
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
     margin:0;
     font-size:18px;
 }
@@ -48,12 +50,9 @@ $found = false;
 <!-- HEADER -->
 <header class="view">
 
-    <div class="back-arrow" onclick="goBack()">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-            <path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2"
-            stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-    </div>
+  <div class="back-arrow" onclick="goBack()">
+    IQRA
+</div>
 
     <h2>📖 Al-Quran</h2>
 
@@ -121,7 +120,7 @@ if($search != ""){
 <script>
 function goBack(){
     {
-        window.location.href = "index.html";
+        window.location.href = "index.php";
     }
 }
 </script>

@@ -1,6 +1,17 @@
 <?php
 include "db.php";
-$result = mysqli_query($conn, "SELECT * FROM books");
+
+// SEARCH
+$search = $_GET['search'] ?? '';
+
+if($search != ""){
+    $result = mysqli_query($conn, "
+        SELECT * FROM books 
+        WHERE name LIKE '%$search%'
+    ");
+} else {
+    $result = mysqli_query($conn, "SELECT * FROM books");
+}
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +28,7 @@ body{
     background:#f8fafc;
 }
 
-/* HEADER FIXED (proper height) */
+/* HEADER */
 .view{
     background:#0f172a;
     color:white;
@@ -29,54 +40,65 @@ body{
     min-height:70px;
 }
 
-/* TITLE */
 .view h2{
     margin:0;
     font-size:22px;
     font-weight:700;
 }
 
-/* back arrow same rahega (NO CHANGE) */
+/* BACK BUTTON */
 .back-arrow{
     position:absolute;
     left:15px;
     top:50%;
     transform:translateY(-50%);
-
-    width:38px;
-    height:38px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
     cursor:pointer;
+    font-size:18px;
+    font-weight:600;
 }
 
-/* SUB TEXT */
-.sub{
+/* SEARCH */
+.search-box{
     text-align:center;
-    color:#6b7280;
-    margin-top:18px;
+    margin-top:15px;
+}
+
+.search-box input{
+    padding:10px 15px;
+    width:260px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    outline:none;
+}
+
+/* CLEAR BUTTON */
+.clear-btn{
+    text-align:center;
+    margin-top:10px;
+}
+
+.clear-btn a{
+    padding:8px 15px;
+    background:#0f172a;
+    color:white;
+    border-radius:6px;
+    text-decoration:none;
     font-size:14px;
 }
 
-/* BACKGROUND SECTION FIXED */
+/* CONTAINER */
 .container{
     max-width:1000px;
     margin:30px auto;
     padding:30px;
-
-    /* IMPORTANT FIX */
     background:url('2-1024x683.jpg') center center no-repeat;
     background-size:cover;
-
     border-radius:20px;
     position:relative;
     overflow:hidden;
 }
 
-/* LIGHT OVERLAY */
+/* OVERLAY */
 .container::before{
     content:"";
     position:absolute;
@@ -130,30 +152,51 @@ body{
 <header class="view">
 
    <div class="back-arrow" onclick="goBack()">
-        <svg viewBox="0 0 24 24" width="24" height="24">
-            <path d="M15 6l-6 6 6 6" fill="none" stroke="currentColor"
-            stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-    </div>
+    IQRA
+   </div>
 
-    <h2>📖 Iqra Hadith Library</h2>
+   <h2>📖 Iqra Hadith Library</h2>
 
 </header>
 
-<div class="sub">Authentic Hadith Collection</div>
+<!-- SEARCH -->
+<div class="search-box">
+    <form method="GET">
+        <input type="text" name="search"
+        oninput="this.form.submit()"
+        placeholder="Search Hadith books..."
+        value="<?php echo htmlspecialchars($search); ?>">
+    </form>
+</div>
 
+<!-- SHOW ALL BUTTON -->
+<?php if($search != "") { ?>
+<div class="clear-btn">
+    <a href="books.php">Show All Books</a>
+</div>
+<?php } ?>
+
+<!-- CONTENT -->
 <div class="container">
 
     <div class="grid">
 
-    <?php while($row = mysqli_fetch_assoc($result)) { ?>
+    <?php if(mysqli_num_rows($result) > 0) { ?>
 
-        <div class="card">
-            <div class="icon">📚</div>
-            <a href="hadiths.php?book_id=<?php echo $row['id']; ?>">
-                <?php echo htmlspecialchars($row['name']); ?>
-            </a>
-        </div>
+        <?php while($row = mysqli_fetch_assoc($result)) { ?>
+
+            <div class="card">
+                <div class="icon">📚</div>
+                <a href="hadiths.php?book_id=<?php echo $row['id']; ?>">
+                    <?php echo htmlspecialchars($row['name']); ?>
+                </a>
+            </div>
+
+        <?php } ?>
+
+    <?php } else { ?>
+
+        <p style="text-align:center; position:relative;">No books found 😔</p>
 
     <?php } ?>
 
@@ -163,7 +206,7 @@ body{
 
 <script>
 function goBack(){
-    window.history.back();
+    window.location.href = "index.php";
 }
 </script>
 

@@ -1,45 +1,30 @@
 <?php $page = "users"; ?>
 <?php
 session_start();
+
 if(!isset($_SESSION['user']) || $_SESSION['role'] !== 'admin'){
     header("Location: login.php");
     exit();
 }
 
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db   = "iqra_db";
-
-/*
-✔ LIVE HOSTING (InfinityFree)
-*/
-$live_host = "sql308.infinityfree.com";
-$live_user = "if0_41802860";
-$live_pass = "GWHDgLz3W2GQ";
-$live_db   = "if0_41802860_iqra";
-
-/*
-✔ AUTO DETECT ENVIRONMENT
-*/
-if($_SERVER['HTTP_HOST'] == "localhost") {
-    $conn = mysqli_connect($host, $user, $pass, $db);
-} else {
-    $conn = mysqli_connect($live_host, $live_user, $live_pass, $live_db);
-}
-
-/*
-✔ ERROR CHECK
-*/
+/* DB */
+$conn = mysqli_connect("localhost","root","","iqra_db");
 if(!$conn){
-    die("Database connection failed: " . mysqli_connect_error());
+    die("Database connection failed");
 }
 
-// search
+/* SEARCH */
 $search = "";
 if(isset($_GET['search'])){
     $search = $_GET['search'];
-    $result = mysqli_query($conn,"SELECT * FROM user WHERE name LIKE '%$search%' OR email LIKE '%$search%'");
+
+    $result = mysqli_query($conn,
+    "SELECT * FROM user 
+     WHERE name LIKE '%$search%' 
+     OR country LIKE '%$search%' 
+     OR city LIKE '%$search%'"
+    );
+
 } else {
     $result = mysqli_query($conn,"SELECT * FROM user");
 }
@@ -56,77 +41,52 @@ if(isset($_GET['search'])){
 
 <div class="container">
 
-<!-- Sidebar -->
+<!-- SIDEBAR -->
 <aside class="sidebar">
     <h2>🕌 IQRA</h2>
+
     <ul>
-              <li>
-            <a href="dashboard.php" class="<?= ($page == 'dashboard') ? 'active' : '' ?>">
-                Dashboard
-            </a>
-        </li>
-
-        <li>
-            <a href="users.php" class="<?= ($page == 'users') ? 'active' : '' ?>">
-                Users
-            </a>
-        </li>
-
-        <li>
-            <a href="admin_books.php" class="<?= ($page == 'books') ? 'active' : '' ?>">
-                Hadith Books
-            </a>
-        </li>
-
-        <li>
-            <a href="admin_hadiths.php" class="<?= ($page == 'hadiths') ? 'active' : '' ?>">
-                Hadiths
-            </a>
-        </li>
-
-        <li>
-            <a href="admin_messages.php" class="<?= ($page == 'messages') ? 'active' : '' ?>">
-                Messages
-            </a>
-        </li>
- <li>
-    <a href="add_question.php" class="<?= ($page == 'add_question') ? 'active' : '' ?>">
-        Add Quiz Question
-    </a>
-</li>
+        <li><a href="dashboard.php">Dashboard</a></li>
+        <li><a href="users.php" class="active">Users</a></li>
+        <li><a href="admin_books.php">Hadith Books</a></li>
+        <li><a href="admin_hadiths.php">Hadiths</a></li>
+        <li><a href="admin_messages.php">Messages</a></li>
+        <li><a href="all_questions.php"> Quiz Questions</a></li>
     </ul>
 </aside>
 
-<!-- Main -->
+<!-- MAIN -->
 <main class="main">
 
-<h1>Manage Users</h1>
+<h2>Manage Users</h2>
 
-<!-- Search -->
+<!-- SEARCH -->
 <form method="GET">
-<input type="text" name="search" placeholder="Search user..." value="<?php echo $search; ?>">
-<button>Search</button>
+    <input type="text" name="search" placeholder="Search name, country, city..." value="<?php echo $search; ?>">
+    <button type="submit">Search</button>
 </form>
 
-<!-- Table -->
-<table class="table">
+<!-- TABLE -->
+<table>
 <tr>
-<th>ID</th>
-<th>Name</th>
-<th>Email</th>
-<th>Action</th>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Country</th>
+    <th>City</th>
+    <th>Action</th>
 </tr>
 
 <?php while($row = mysqli_fetch_assoc($result)){ ?>
 <tr>
-<td><?php echo $row['id']; ?></td>
-<td><?php echo $row['name']; ?></td>
-<td><?php echo $row['email']; ?></td>
+    <td><?php echo $row['id']; ?></td>
+    <td><?php echo $row['name']; ?></td>
+    <td><?php echo $row['country']; ?></td>
+    <td><?php echo $row['city']; ?></td>
 
-<td>
-<a href="edit_user.php?id=<?php echo $row['id']; ?>">Edit</a> |
-<a href="delete_user.php?id=<?php echo $row['id']; ?>">Delete</a>
-</td>
+    <td>
+        <a href="edit_user.php?id=<?php echo $row['id']; ?>">Edit</a> |
+        <a href="delete_user.php?id=<?php echo $row['id']; ?>">Delete</a>
+    </td>
 </tr>
 <?php } ?>
 
