@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+
+  web:
+    build: .
+    container_name: iqra_web
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    environment:
+      - DOCKER_ENV=true   # ✅ YAHAN LAGTA HAI
+    depends_on:
+      - db
+
+  db:
+    image: mysql:5.7
+    container_name: iqra_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: iqra_db
+    ports:
+      - "3307:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+
+volumes:
+  db_data:

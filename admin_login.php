@@ -1,8 +1,6 @@
 <?php
 session_start();
-$conn = mysqli_connect("localhost","root","","iqra_db");
-
-$error = "";
+include "db.php";
 
 if(isset($_POST['login'])){
 

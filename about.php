@@ -42,7 +42,14 @@ session_start();
     <div class="qc-right">
 
         <?php if(isset($_SESSION['user'])) { ?>
-            <span>👤 <?php echo $_SESSION['user']; ?></span>
+                  <span class="user-icon">
+  <i data-lucide="user-circle"></i>
+</span>
+          <script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>  
+
             <a href="logout.php" class="logout-btn">Logout</a>
         <?php } else { ?>
             <a href="login.php" class="signin-btn">Sign In</a>

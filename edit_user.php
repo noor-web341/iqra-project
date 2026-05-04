@@ -1,25 +1,6 @@
 <?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db   = "iqra_db";
-
-/* LIVE HOSTING */
-$live_host = "sql308.infinityfree.com";
-$live_user = "if0_41802860";
-$live_pass = "GWHDgLz3W2GQ";
-$live_db   = "if0_41802860_iqra";
-
-/* AUTO CONNECT */
-if($_SERVER['HTTP_HOST'] == "localhost") {
-    $conn = mysqli_connect($host, $user, $pass, $db);
-} else {
-    $conn = mysqli_connect($live_host, $live_user, $live_pass, $live_db);
-}
-
-if(!$conn){
-    die("Database connection failed");
-}
+include "db.php";
+session_start();
 
 $id = $_GET['id'];
 $result = mysqli_query($conn, "SELECT * FROM user WHERE id=$id");

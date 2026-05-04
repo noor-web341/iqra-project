@@ -1,4 +1,5 @@
 <?php
+include "db.php";
 session_start();
 
 if(!isset($_SESSION['user']) || $_SESSION['role'] !== 'admin'){
@@ -6,10 +7,7 @@ if(!isset($_SESSION['user']) || $_SESSION['role'] !== 'admin'){
     exit();
 }
 
-$conn = mysqli_connect("localhost","root","","iqra_db");
-if(!$conn){
-    die("Database connection failed");
-}
+
 
 $user_count = mysqli_num_rows(mysqli_query($conn,"SELECT * FROM user"));
 $msg_count  = mysqli_num_rows(mysqli_query($conn,"SELECT * FROM contact_messages"));
