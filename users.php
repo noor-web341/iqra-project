@@ -7,11 +7,7 @@ if(!isset($_SESSION['user']) || $_SESSION['role'] !== 'admin'){
     exit();
 }
 
-/* DB */
-$conn = mysqli_connect("localhost","root","","iqra_db");
-if(!$conn){
-    die("Database connection failed");
-}
+include "db.php";
 
 /* SEARCH */
 $search = "";

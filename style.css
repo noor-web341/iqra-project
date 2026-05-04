@@ -45,8 +45,23 @@ body {
     z-index: 1000;
 }
 
+.user-icon{
+    width:42px;
+    height:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:linear-gradient(135deg,#111827,#374151);
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
 
-
+.user-icon:hover{
+    transform:scale(1.1);
+}
 .qc-logo {
     font-weight: 700;
     font-size: 24px;

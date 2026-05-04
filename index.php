@@ -9,6 +9,11 @@ session_start();
 
 <link rel="stylesheet" href="style.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+<span class="user-icon">
+  <span class="material-symbols-outlined">account_circle</span>
+</span>
 </head>
 
 <body>
@@ -35,10 +40,14 @@ session_start();
 
         <?php if(isset($_SESSION['user'])) { ?>
 
-            <span class="user-email">
-                👤 <?php echo htmlspecialchars($_SESSION['user']); ?>
-            </span>
+        <span class="user-icon">
+  <i data-lucide="user-circle"></i>
+</span>
 
+<script src="https://unpkg.com/lucide@latest"></script>
+<script>
+  lucide.createIcons();
+</script>
             <a href="logout.php" class="logout-btn">Logout</a>
 
         <?php } else { ?>
@@ -51,7 +60,7 @@ session_start();
         <span class="nav-icon">☰</span>
 
     </div>
-    <!-- HAMBURGER MENU PANEL --> <div class="menu-overlay" id="menuOverlay"></div> <aside class="side-menu" id="sideMenu"> <div class="menu-header"> <h3>IQRA</h3> <span class="close-btn" id="closeMenu">✕</span> </div> <nav class="menu-links"> <a href="index.php">🏠 Home</a> <a href="quran.php">📖 Quran</a> <a href="books.php">📚 Hadith</a> 
+    <!--MENU PANEL --> <div class="menu-overlay" id="menuOverlay"></div> <aside class="side-menu" id="sideMenu"> <div class="menu-header"> <h3>IQRA</h3> <span class="close-btn" id="closeMenu">✕</span> </div> <nav class="menu-links"> <a href="index.php">🏠 Home</a> <a href="quran.php">📖 Quran</a> <a href="books.php">📚 Hadith</a> 
      <!-- <a href="Goals.php">🎯 Goals</a> -->
       <a href="view_notes.php">📝 Notes</a> <a href="quran_quiz.php">🧠 Quiz</a> <a href="prayer.php">🕌 Prayer Times</a> <a href="about.php">ℹ️ About IQRA</a> <a href="contact.php">📞 Contact</a> </nav> </aside>
 
