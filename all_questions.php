@@ -21,6 +21,66 @@ $result = mysqli_query($conn,"SELECT * FROM quiz_questions ORDER BY id DESC");
 <link rel="stylesheet" href="dashboard.css">
 
 <style>
+
+
+html, body{
+    margin:0;
+    padding:0;
+    font-family:"Segoe UI", sans-serif;
+    background:linear-gradient(135deg,#f1f5f9,#e2e8f0);
+}
+
+/* ================= LAYOUT ================= */
+.container{
+    display:flex;
+    min-height:100vh;
+}
+
+/* ================= SIDEBAR ================= */
+.sidebar{
+    width:240px;
+    height:100vh;
+    background:rgba(15,23,42,0.97);
+    color:white;
+    padding:20px;
+    position:fixed;
+    left:0;
+    top:0;
+    overflow-y:auto;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    margin:10px 0;
+}
+
+.sidebar ul li a{
+    display:block;
+    padding:12px;
+    color:#cbd5e1;
+    text-decoration:none;
+    border-radius:10px;
+    transition:0.3s;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active{
+    background:#2563eb;
+    color:white;
+    transform:translateX(5px);
+}
+
+/* ================= MAIN ================= */
+.main{
+    margin-left:240px;
+    padding:25px;
+    width:calc(100% - 240px);
+}
+
+/* ================= TOP BAR ================= */
 .top-bar{
     display:flex;
     justify-content:space-between;
@@ -28,37 +88,91 @@ $result = mysqli_query($conn,"SELECT * FROM quiz_questions ORDER BY id DESC");
     margin-bottom:20px;
 }
 
+.top-bar h2{
+    font-size:22px;
+}
+
+/* ================= ADD BUTTON ================= */
 .add-btn{
-    background:#22c55e;
+    background:linear-gradient(135deg,#22c55e,#16a34a);
     color:white;
     padding:10px 16px;
     text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
+    border-radius:10px;
+    font-weight:600;
+    transition:0.3s;
 }
 
 .add-btn:hover{
-    background:#16a34a;
+    transform:scale(1.05);
 }
 
+/* ================= TABLE ================= */
 table{
     width:100%;
     border-collapse:collapse;
     background:#fff;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.06);
 }
 
-th, td{
-    padding:12px;
-    border:1px solid #ddd;
-}
-
+/* HEADER */
 th{
-    background:#2563eb;
+    background:linear-gradient(90deg,#2563eb,#1d4ed8);
     color:white;
+    padding:14px;
+    text-align:left;
+    font-size:14px;
 }
 
-.edit{ color:#2563eb; }
-.delete{ color:red; }
+/* CELLS */
+td{
+    padding:12px;
+    border-bottom:1px solid #eee;
+    font-size:14px;
+}
+
+/* ROW HOVER */
+tr:hover{
+    background:#f9fafb;
+}
+
+/* ================= ACTION LINKS ================= */
+.edit{
+    color:#2563eb;
+    font-weight:600;
+    text-decoration:none;
+    margin-right:8px;
+}
+
+.delete{
+    color:#ef4444;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.edit:hover,
+.delete:hover{
+    text-decoration:underline;
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:768px){
+
+    .sidebar{
+        width:200px;
+    }
+
+    .main{
+        margin-left:200px;
+        width:calc(100% - 200px);
+    }
+
+    table{
+        font-size:13px;
+    }
+}
 </style>
 
 </head>
@@ -105,6 +219,9 @@ th{
                 Quiz Questions
             </a>
         </li>
+        <li><a href="transactions_report.php" class="<?= ($page == 'transactions') ? 'active' : '' ?>">
+            Transactions
+        </a></li>
     </ul>
 </aside>
 

@@ -40,80 +40,135 @@ $surah_result = mysqli_query($conn,"
 <title>Add Question</title>
 
 <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Segoe UI", sans-serif;
+}
+
 body{
-    font-family: Arial;
-    background: linear-gradient(135deg, #e0e7ff, #f0fdf4);
+    min-height:100vh;
+    background:linear-gradient(135deg,#e0e7ff,#f0fdf4);
     display:flex;
     justify-content:center;
     align-items:center;
-    height:100vh;
+    padding:20px;
 }
 
+/* ================= CARD ================= */
 .container{
+    width:420px;
     background:#fff;
     padding:25px;
-    border-radius:12px;
-    width:400px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    border-radius:16px;
+    box-shadow:0 15px 35px rgba(0,0,0,0.12);
+    animation:fadeIn 0.3s ease-in-out;
 }
 
+/* TITLE */
 h2{
     text-align:center;
     margin-bottom:15px;
+    font-size:22px;
 }
 
+/* ================= ALERTS ================= */
 .success{
     background:#d1fae5;
     color:#065f46;
     padding:10px;
-    border-radius:6px;
+    border-radius:8px;
     margin-bottom:10px;
+    font-size:13px;
 }
 
 .error{
     background:#fee2e2;
     color:#991b1b;
     padding:10px;
-    border-radius:6px;
+    border-radius:8px;
     margin-bottom:10px;
+    font-size:13px;
 }
 
+/* ================= INPUTS ================= */
 input, select, textarea{
     width:100%;
-    padding:10px;
+    padding:12px;
     margin:8px 0;
-    border:1px solid #ddd;
-    border-radius:8px;
+    border:1px solid #e5e7eb;
+    border-radius:10px;
     font-size:14px;
-}
-
-textarea{
-    height:80px;
-    resize:none;
-}
-
-button{
-    width:100%;
-    background:#2563eb;
-    color:white;
-    padding:10px;
-    border:none;
-    border-radius:8px;
-    font-size:16px;
-    cursor:pointer;
+    background:#f9fafb;
     transition:0.3s;
 }
 
-button:hover{
-    background:#1e40af;
+textarea{
+    height:90px;
+    resize:none;
 }
 
+input:focus,
+select:focus,
+textarea:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 0 3px rgba(37,99,235,0.15);
+    background:#fff;
+    outline:none;
+}
+
+/* ================= BUTTON ================= */
+button{
+    width:100%;
+    background:linear-gradient(135deg,#2563eb,#1d4ed8);
+    color:white;
+    padding:12px;
+    border:none;
+    border-radius:10px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
+    margin-top:5px;
+}
+
+button:hover{
+    transform:scale(1.03);
+}
+
+/* ================= BACK BUTTON ================= */
 .back-btn{
     display:block;
     text-align:center;
-    margin-top:10px;
+    margin-top:12px;
+    color:#6b7280;
     text-decoration:none;
-    color:#555;
+    font-size:13px;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    color:#111827;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ================= RESPONSIVE ================= */
+@media(max-width:500px){
+    .container{
+        width:100%;
+    }
 }
 </style>
 

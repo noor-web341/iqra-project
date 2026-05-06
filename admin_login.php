@@ -1,4 +1,5 @@
 <?php
+$error = "";
 session_start();
 include "db.php";
 

@@ -185,12 +185,20 @@ body{
 
         <?php while($row = mysqli_fetch_assoc($result)) { ?>
 
-            <div class="card">
-                <div class="icon">📚</div>
-                <a href="hadiths.php?book_id=<?php echo $row['id']; ?>">
-                    <?php echo htmlspecialchars($row['name']); ?>
-                </a>
-            </div>
+        <div class="card">
+    <div class="icon">📚</div>
+
+    <a href="hadiths.php?book_id=<?php echo $row['id']; ?>">
+        <?php echo htmlspecialchars($row['name']); ?>
+    </a>
+
+    <br><br>
+
+   <a href="download_pdf.php?book_id=<?php echo $row['id']; ?>" 
+   style="display:inline-block;margin-top:10px;padding:8px 12px;background:#ef4444;color:white;border-radius:8px;font-size:13px;text-decoration:none;">
+   📄 Download PDF
+</a>
+</div>
 
         <?php } ?>
 
@@ -199,6 +207,7 @@ body{
         <p style="text-align:center; position:relative;">No books found 😔</p>
 
     <?php } ?>
+    
 
     </div>
 
