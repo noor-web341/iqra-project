@@ -136,8 +136,11 @@ body{
 
 /* ===== CHART ===== */
 .chart-box{
+    justify-content: center;
     background:white;
     margin-top:20px;
+    margin-left:200px;
+    margin-right:400px;
     padding:20px;
     border-radius:10px;
     height:360px;
@@ -177,6 +180,10 @@ body{
             <li><a href="admin_hadiths.php">Hadiths</a></li>
             <li><a href="admin_messages.php">Messages</a></li>
             <li><a href="all_questions.php"> Quiz Questions</a></li>
+            <!-- NEW ADD -->
+     <li><a href="transactions_report.php" class="<?= ($page == 'transactions') ? 'active' : '' ?>">
+            Transactions
+        </a></li>
         </ul>
     </aside>
 
